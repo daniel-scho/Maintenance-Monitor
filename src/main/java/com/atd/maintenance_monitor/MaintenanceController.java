@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class MaintenanceController {
 
-    // http://localhost:8080/sub/5/4
+    // http://localhost:8080/change/"xy"
     @GetMapping("/change/{message}")
     public String changeState(
             @PathVariable String message
@@ -18,21 +18,4 @@ public class MaintenanceController {
         }
 
     }
-
-    /*  Example Code:
-    // http://localhost:8080/sub?a=5&b=4
-    @GetMapping("/sub")
-    public int sub(
-            @RequestParam int a, @RequestParam int b
-    ) {
-        return a - b;
-    }
-    @GetMapping("/mal")
-    public int mal(
-            @RequestParam int a, @RequestParam int b
-    ) {
-        return a * b;
-    }
-    */
-
 }
