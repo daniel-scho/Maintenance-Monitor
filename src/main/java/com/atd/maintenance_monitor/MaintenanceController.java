@@ -22,7 +22,7 @@ public class MaintenanceController {
         }
 
     }
-    @GetMapping("/change")
+    @GetMapping("/status")
     public String initialState() {
             return "green " + ts;
         }
