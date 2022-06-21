@@ -27,7 +27,7 @@ jobs:
       
     - run: mkdir download && cp target/*.jar download
     - name: Upload a Build Artifact
-      uses: actions/download-artifact@v3.0.0
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: Maintenace-Monitor
         path: downlaod
