@@ -14,14 +14,14 @@ public class MaintenanceController {
     ) {
         String ts = timestamp.getTimestamp();
         if (message.equals("reset")) {
-            return "green\n" + ts;
+            return "green" + ts;
         } else {
-            return "red\n" + ts;
+            return "red" + ts;
         }
 
     }
     @GetMapping("/change")
     public String initialState() {
-            return "green\n";
+            return "green";
         }
 }
