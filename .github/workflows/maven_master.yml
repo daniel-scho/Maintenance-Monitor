@@ -26,7 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - run: mkdir download && cp target/*.jar download
-    - name: Download a Build Artifact
+    - name: Upload a Build Artifact
       uses: actions/download-artifact@v3.0.0
       with:
         name: Maintenace-Monitor
