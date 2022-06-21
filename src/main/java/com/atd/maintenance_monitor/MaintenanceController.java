@@ -3,7 +3,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MaintenanceController {
-    Timestamp timestamp = new Timestamp();
 
     // http://localhost:8080/sub/5/4
     @GetMapping("/change/{message}")
@@ -12,11 +11,10 @@ public class MaintenanceController {
 
     ) {
 
-        String ts = timestamp.getTimestamp();
         if (message.equals("reset")) {
-            return "green\n" + ts;
+            return "green\n";
         } else {
-            return "red\n" + ts;
+            return "red\n";
         }
 
     }
