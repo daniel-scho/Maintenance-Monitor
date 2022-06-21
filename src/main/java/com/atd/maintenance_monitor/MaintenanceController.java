@@ -12,9 +12,9 @@ public class MaintenanceController {
     ) {
 
         if (message.equals("reset")) {
-            return "green\n";
+            return "green";
         } else {
-            return "red\n";
+            return "red";
         }
     }
     @GetMapping("/change")

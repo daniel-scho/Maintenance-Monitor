@@ -11,7 +11,7 @@ class MaintenanceControllerTest {
     void changeStateTest(){
         // Arrange
         String input = "reset";
-        String expected = "green\n";
+        String expected = "green";
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -21,7 +21,7 @@ class MaintenanceControllerTest {
     void changeStateTest2(){
         // Arrange
         String input = "string";
-        String expected = "red\n";
+        String expected = "red";
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -31,7 +31,7 @@ class MaintenanceControllerTest {
     void changeStateTestEmpty(){
         // Arrange
         String input = "";
-        String expected = "red\n";
+        String expected = "red";
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -41,7 +41,7 @@ class MaintenanceControllerTest {
     void changeStateTestSpace(){
         // Arrange
         String input = " ";
-        String expected = "red\n";
+        String expected = "red";
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -51,7 +51,7 @@ class MaintenanceControllerTest {
     @Test
     void initialStateTest(){
         // Arrange
-        String expected = "green\n";
+        String expected = "green";
         // Act
         String output = maintenanceController.initialState();
         // Assert
