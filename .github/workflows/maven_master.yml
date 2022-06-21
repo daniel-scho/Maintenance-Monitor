@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v3.1.0
       with:
         name: Maintenace-Monitor
-        path: downlaod
+        path: download
