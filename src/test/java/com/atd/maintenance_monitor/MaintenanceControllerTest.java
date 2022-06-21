@@ -6,12 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MaintenanceControllerTest {
     MaintenanceController maintenanceController = new MaintenanceController();
+    Timestamp timestamp = new Timestamp();
 
     @Test
     void changeStateTest(){
         // Arrange
         String input = "reset";
-        String expected = "green";
+        String expected = "green " + timestamp.getTimestamp();
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -21,7 +22,7 @@ class MaintenanceControllerTest {
     void changeStateTest2(){
         // Arrange
         String input = "string";
-        String expected = "red";
+        String expected = "red " + timestamp.getTimestamp();
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -31,7 +32,7 @@ class MaintenanceControllerTest {
     void changeStateTestEmpty(){
         // Arrange
         String input = "";
-        String expected = "red";
+        String expected = "red " + timestamp.getTimestamp();
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -41,7 +42,7 @@ class MaintenanceControllerTest {
     void changeStateTestSpace(){
         // Arrange
         String input = " ";
-        String expected = "red";
+        String expected = "red " + timestamp.getTimestamp();
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -51,7 +52,7 @@ class MaintenanceControllerTest {
     @Test
     void initialStateTest(){
         // Arrange
-        String expected = "green";
+        String expected = "green " + timestamp.getTimestamp();
         // Act
         String output = maintenanceController.initialState();
         // Assert
