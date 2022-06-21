@@ -16,6 +16,9 @@ public class MaintenanceController {
         } else {
             return "red\n";
         }
-
     }
+    @GetMapping("/change")
+    public String initialState() {
+            return "green\n";
+        }
 }
