@@ -4,18 +4,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class MaintenanceController {
 
-    // http://localhost:8080/change/"xy"
-    @GetMapping("/change/{message}")
+    Timestamp timestamp = new Timestamp();
+
+    // http://localhost:8080/status/"xy"
+    @GetMapping("/status/{message}")
     public String changeState(
             @PathVariable String message
 
     ) {
-
+        String ts = timestamp.getTimestamp();
         if (message.equals("reset")) {
-            return "green";
+            return "green\n" + ts;
         } else {
-            return "red";
+            return "red\n" + ts;
         }
+
     }
     @GetMapping("/change")
     public String initialState() {
