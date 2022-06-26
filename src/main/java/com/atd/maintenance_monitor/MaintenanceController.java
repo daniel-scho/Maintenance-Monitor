@@ -16,6 +16,8 @@ public class MaintenanceController {
     ) {
         String ts = timestamp.getTimestamp();
 
+        String ts = timestamp.getTimestamp();
+
         if (message.equals("reset")) {
             return "green " + ts;
         } else {
