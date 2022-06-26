@@ -22,7 +22,7 @@ class MaintenanceControllerTest {
     void changeStateTest2(){
         // Arrange
         String input = "string";
-        String expected = "red " + timestamp.getTimestamp();
+        String expected = "red " + timestamp.getTimestamp() + " " + input;
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -32,7 +32,7 @@ class MaintenanceControllerTest {
     void changeStateTestEmpty(){
         // Arrange
         String input = "";
-        String expected = "red " + timestamp.getTimestamp();
+        String expected = "red " + timestamp.getTimestamp() + " " + input;
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
@@ -42,7 +42,7 @@ class MaintenanceControllerTest {
     void changeStateTestSpace(){
         // Arrange
         String input = " ";
-        String expected = "red " + timestamp.getTimestamp();
+        String expected = "red " + timestamp.getTimestamp() + " " + input;
         // Act
         String output = maintenanceController.changeState(input);
         // Assert
