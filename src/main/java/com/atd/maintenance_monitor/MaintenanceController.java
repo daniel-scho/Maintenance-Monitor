@@ -25,7 +25,7 @@ public class MaintenanceController {
     }
     @GetMapping("/status")
     public String initialState() {
-        String ts = timestamp.getTimestamp();
-            return "green " + ts;
+        String ts1 = timestamp.getTimestamp();
+            return "green " + ts1;
         }
 }
