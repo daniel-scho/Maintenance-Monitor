@@ -15,9 +15,6 @@ public class MaintenanceController {
 
     ) {
         String ts = timestamp.getTimestamp();
-
-        String ts = timestamp.getTimestamp();
-
         if (message.equals("reset")) {
             return "green " + ts;
         } else {
@@ -27,7 +24,7 @@ public class MaintenanceController {
     }
     @GetMapping("/status")
     public String initialState() {
-        String ts1 = timestamp.getTimestamp();
-            return "green " + ts1;
+        String ts = timestamp.getTimestamp();
+            return "green " + ts;
         }
 }
