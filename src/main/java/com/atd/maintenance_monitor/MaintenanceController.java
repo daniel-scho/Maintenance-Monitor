@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 public class MaintenanceController {
 
     Timestamp timestamp = new Timestamp();
-    String ts = timestamp.getTimestamp();
+
 
 
     // http://localhost:8080/status/"xy"
@@ -14,16 +14,18 @@ public class MaintenanceController {
             @PathVariable String message
 
     ) {
+        String ts = timestamp.getTimestamp();
 
         if (message.equals("reset")) {
             return "green " + ts;
         } else {
-            return "red " + ts;
+            return "red " + ts + " " + message;
         }
 
     }
     @GetMapping("/status")
     public String initialState() {
+        String ts = timestamp.getTimestamp();
             return "green " + ts;
         }
 }
